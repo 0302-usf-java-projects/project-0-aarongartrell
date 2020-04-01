@@ -1,13 +1,17 @@
+package com.revature.controller;
 
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
-import accountconsole.dao.AccountDao;
+import com.revature.exception.DuplicateUsernameException;
+import com.revature.exception.PasswordTooShortException;
+import com.revature.model.Account;
+import com.revature.repository.AccountDao;
 
 public class Driver {
   
   /**
-   * Canonical scanner for reading console input.
+   * Scanner for reading console input.
    */
   private static Scanner sc = new Scanner(System.in);
   private static AccountDao adao = new AccountDao();
@@ -112,7 +116,7 @@ public class Driver {
     System.out.println("Choose 2 to make a deposit.");
     System.out.println("Choose 3 to make a withdrawal");
     System.out.println("Choose 4 to create Account");
-    System.out.println("Choose Accounts to list all Accounts \n");
+    //System.out.println("Choose Accounts to list all Accounts \n");
     System.out.println("--------------------------------------\n");
     
     
@@ -221,5 +225,3 @@ public class Driver {
   }
   
 }
-  
-  
